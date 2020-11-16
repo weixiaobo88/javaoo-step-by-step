@@ -1,4 +1,4 @@
-package practice05;
+package practice11;
 
 public class Teacher {
 }

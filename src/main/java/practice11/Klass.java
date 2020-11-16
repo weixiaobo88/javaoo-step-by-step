@@ -1,4 +1,4 @@
-package practice06;
+package practice11;
 
 public class Klass {
 }
