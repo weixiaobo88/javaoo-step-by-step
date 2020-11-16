@@ -3,14 +3,19 @@
 //import org.junit.Before;
 //import org.junit.Test;
 //
+//import java.io.ByteArrayOutputStream;
+//import java.io.PrintStream;
+//
 //import static org.fest.assertions.api.Assertions.assertThat;
 //
-//public class Practice08Test {
+//public class practice08Test {
 //    private Klass klass;
+//    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 //
 //    @Before
 //    public void setup() {
 //        klass = new Klass(2);
+//        System.setOut(new PrintStream(outContent));
 //    }
 //
 //    @Test
@@ -45,8 +50,23 @@
 //    }
 //
 //    @Test
-//    public void should_class_assign_a_leader() throws Exception {
+//    public void should_class_not_assign_a_student_as_leader_when_student_is_not_a_member() throws Exception {
+//        Student jerry = new Student(1, "Jerry", 8, new Klass(5));
+//
+//        klass.assignLeader(jerry);
+//
+//        assertThat(systemOut()).isEqualTo("It is not one of us.\n");
+//        assertThat(klass.getLeader()).isNotEqualTo(jerry);
+//    }
+//
+//    private String systemOut() {
+//        return outContent.toString();
+//    }
+//
+//    @Test
+//    public void should_class_assign_a_member_student_as_leader() throws Exception {
 //        Student jerry = new Student(1, "Jerry", 8, klass);
+//        klass.appendMember(jerry);
 //        klass.assignLeader(jerry);
 //        assertThat(klass.getLeader()).isEqualTo(jerry);
 //    }
@@ -68,6 +88,7 @@
 //    @Test
 //    public void should_student_introduce_itself_as_class_leader() throws Exception {
 //        Student tom = new Student(1, "Tom", 21, klass);
+//        klass.appendMember(tom);
 //        klass.assignLeader(tom);
 //        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Student. I am Leader of Class 2.");
 //    }

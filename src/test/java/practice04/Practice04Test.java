@@ -1,10 +1,10 @@
-//package practice05;
+//package practice04;
 //
 //import org.junit.Test;
 //
 //import static org.fest.assertions.api.Assertions.assertThat;
 //
-//public class practice05Test {
+//public class practice04Test {
 //    @Test
 //    public void should_person_have_name_and_age() throws Exception {
 //        Person person = new Person("Tom", 21);
@@ -34,22 +34,15 @@
 //    }
 //
 //    @Test
-//    public void should_teacher_have_name_and_age_and_class() throws Exception {
-//        Teacher tom = new Teacher("Tom", 21, 2);
+//    public void should_worker_have_name_and_age() throws Exception {
+//        Worker tom = new Worker("Tom", 21);
 //        assertThat(tom.getName()).isEqualTo("Tom");
 //        assertThat(tom.getAge()).isEqualTo(21);
-//        assertThat(tom.getKlass()).isEqualTo(2);
 //    }
 //
 //    @Test
-//    public void should_teacher_introduce_itself_with_which_class_it_teaches() throws Exception {
-//        Teacher tom = new Teacher("Tom", 21, 2);
-//        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2.");
-//    }
-//
-//    @Test
-//    public void should_teacher_introduce_itself_with_no_class_teaching() throws Exception {
-//        Teacher tom = new Teacher("Tom", 21);
-//        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.");
+//    public void should_worker_introduce_itself_with_no_field() throws Exception {
+//        Worker tom = new Worker("Tom", 21);
+//        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Worker. I have a job.");
 //    }
 //}
