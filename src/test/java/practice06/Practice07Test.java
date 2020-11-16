@@ -1,11 +1,11 @@
-//package practice07;
+//package practice06;
 //
 //import org.junit.Before;
 //import org.junit.Test;
 //
 //import static org.fest.assertions.api.Assertions.assertThat;
 //
-//public class Practice07Test {
+//public class practice06Test {
 //    private Klass klass;
 //
 //    @Before
